@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<title>Активатор Круиза by Asket =)</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+  <div id="step0" class="step">
+    <div class="welcome">
+      <p>Если вы попали на эту страницу, то вы скорее всего понимаете, что вы делаете, у вас уже установлены кнопки круиза, но не работает индикация на приборной панели вашего Kia Ceed первого поколения, вы уже считали прошивку EEPROMa 24c16 и готовы её отредактировать, но не знаете что редактировать. Сейчас мы это исправим.</p>
+      <button id="startBtn">Я понял(а), что делаю. Всё на мой страх и риск.</button>
+    </div>
+  </div>
+  <div id="step1" class="step" style="display:none;">
+    <p>У вас приборная панель <b>Supervision</b>?</p>
+    <button class="answerBtn" data-answer="yes">Да</button>
+    <button class="answerBtn" data-answer="no">Нет</button>
+  </div>
+  <div id="step2" class="step" style="display:none;">
+    <p>У вас автомат или механика?</p>
+    <button class="answerBtn" data-answer="auto">Автомат</button>
+    <button class="answerBtn" data-answer="manual">Механика</button>
+  </div>
+  <div id="step3" class="step" style="display:none;">
+    <p>У вас есть ESC? (курсовая устойчивость)</p>
+    <button class="answerBtn" data-answer="yes">Да</button>
+    <button class="answerBtn" data-answer="no">Нет</button>
+  </div>
+  <div id="step4" class="step" style="display:none;">
+    <p>Будем включать индикацию круиз контроля?</p>
+    <button class="answerBtn" data-answer="yes">Да</button>
+    <button class="answerBtn" data-answer="no">Нет</button>
+  </div>
+  <div id="step5" class="step" style="display:none;">
+    <p>А индикацию ограничителя скорости будем включать?</p>
+    <button class="answerBtn" data-answer="yes">Да</button>
+    <button class="answerBtn" data-answer="no">Нет</button>
+  </div>
+  <div id="step6" class="step" style="display:none;">
+    <p>Километры или Мили на дисплее?</p>
+    <button class="answerBtn" data-answer="km">Километры</button>
+    <button class="answerBtn" data-answer="mil">Мили</button>
+  </div>
+  <div id="result" class="step" style="display:none;">
+    <h2>Результат</h2>
+    <p>В адреса DE-DF надо ввести: <span id="deDf"></span></p>
+    <p>В адреса EC-ED надо ввести: <span id="ecEd"></span></p>
+    <p>Хотите отблагодарить автора?</p>
+    <button id="thankBtn">Отблагодарить</button>
+    <button id="skipBtn">Обойдется!</button>
+  </div>
+  <div id="thanks" class="step" style="display:none;">
+    <p>Спасибо за внимание, с Уважением Asket.</p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
